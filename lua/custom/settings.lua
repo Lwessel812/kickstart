@@ -39,18 +39,10 @@ vim.keymap.set('n', 'Q', '<nop>')
 
 vim.keymap.set('n', '<leader>s', ':%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left>')
 
--- Go specific error handling
+vim.keymap.set('n', '<leader>n', ':Explore<CR>')
+
+-- Go specific binds
 vim.keymap.set('n', '<leader>ee', 'oif err != nil {<CR>}<Esc>Oreturn err<Esc>')
+vim.keymap.set('n', '<leader>ec', 'ofmt.Printf("\\033[H\\033[2J")<Esc>')
 
 -- Lsp remaps?
-
--- Enable inlay hints
-vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-  virtual_text = {
-    -- prefix = '',
-    spacing = 0,
-  },
-  signs = true,
-  underline = true,
-  update_in_insert = true,
-})
