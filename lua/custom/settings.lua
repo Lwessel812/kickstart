@@ -46,3 +46,11 @@ vim.keymap.set('n', '<leader>ee', 'oif err != nil {<CR>}<Esc>Oreturn err<Esc>')
 vim.keymap.set('n', '<leader>ec', 'ofmt.Printf("\\033[H\\033[2J")<Esc>')
 
 -- Lsp remaps?
+-- vim.api.nvim_create_autocmd('LspAttach', {
+--   callback = function(e)
+--     local opts = { buffer = e.buf }
+--     vim.keymap.set('i', '<C-h>', function()
+--       vim.lsp.buf.signature_help()
+--     end, opts)
+--   end,
+-- })
