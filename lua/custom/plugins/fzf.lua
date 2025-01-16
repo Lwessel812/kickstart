@@ -1,0 +1,5 @@
+-- fzf
+
+return {
+  'junegunn/fzf',
+}
