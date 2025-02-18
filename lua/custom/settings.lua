@@ -54,3 +54,11 @@ vim.keymap.set('n', '<leader>ec', 'ofmt.Printf("\\033[H\\033[2J")<Esc>')
 --     end, opts)
 --   end,
 -- })
+
+-- Avante recommended
+-- views can only be fully collapsed with the global statusline
+vim.opt.laststatus = 3
+
+-- don't show parse errors in a separate window
+vim.g.zig_fmt_parse_errors = 0
+
