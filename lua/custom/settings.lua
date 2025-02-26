@@ -23,6 +23,10 @@ vim.opt.colorcolumn = '160'
 vim.opt.number = true
 vim.opt.relativenumber = true
 
+-- Turn off automatic comment on newline
+vim.cmd 'autocmd BufEnter * set formatoptions-=cro'
+vim.cmd 'autocmd BufEnter * setlocal formatoptions-=cro'
+
 -- Set keymaps
 vim.keymap.set('x', '<leader>p', '"_dp')
 
@@ -45,6 +49,8 @@ vim.keymap.set('n', '<leader>n', ':Explore<CR>')
 vim.keymap.set('n', '<leader>ee', 'oif err != nil {<CR>}<Esc>Oreturn err<Esc>')
 vim.keymap.set('n', '<leader>ec', 'ofmt.Printf("\\033[H\\033[2J")<Esc>')
 
+-- Fix comment bind
+
 -- Lsp remaps?
 -- vim.api.nvim_create_autocmd('LspAttach', {
 --   callback = function(e)
@@ -61,4 +67,3 @@ vim.opt.laststatus = 3
 
 -- don't show parse errors in a separate window
 vim.g.zig_fmt_parse_errors = 0
-
