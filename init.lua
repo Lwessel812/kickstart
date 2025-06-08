@@ -647,7 +647,7 @@ require('lazy').setup({
         zls = {
           settings = {
             zls = {
-              enable_autofix = true,
+              force_autofix = true,
               highlight_global_var_declarations = true,
               warn_style = true,
             },
